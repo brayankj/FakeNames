@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'namesgenerate';
+  title = 'names...';
+  constructor(){
+    Swal.fire({
+      title: 'Fake Names',
+      text: 'Consumo de Rest-API de Terceros',
+      footer: 'Desarrollo de aplicación sin ánimo de lucro'
+    });
+  }
 }
