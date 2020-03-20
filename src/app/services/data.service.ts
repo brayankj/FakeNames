@@ -24,6 +24,8 @@ export class DataService {
       this.url += `&gender=${genero}`;
     }
 
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', this.url, true);
     return this._htt.get(this.url);
   }
 
